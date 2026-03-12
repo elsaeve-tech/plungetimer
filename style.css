@@ -302,3 +302,36 @@ button:hover {
   line-height: 1.6;
   color: #4e6f86;
 }
+.chart-card {
+  background: linear-gradient(180deg, rgba(245, 251, 255, 0.95), rgba(235, 247, 255, 0.92));
+  border: 1px solid #d6edff;
+  border-radius: 22px;
+  padding: 20px;
+  margin-top: 14px;
+}
+
+.chart-row {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr 1fr;
+  gap: 8px;
+  padding: 10px 0;
+  border-bottom: 1px solid #e4f2fc;
+  font-size: 14px;
+  color: #244c68;
+}
+
+.chart-row:last-of-type {
+  border-bottom: none;
+}
+
+.chart-head {
+  font-weight: bold;
+  color: #12324a;
+}
+
+.chart-note {
+  margin: 14px 0 0 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #5d7f98;
+}
