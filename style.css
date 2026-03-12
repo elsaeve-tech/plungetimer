@@ -296,3 +296,9 @@ button:hover {
   color: #6c8fa6;
   margin-top: 4px;
 }
+.seo-text {
+  margin-top: 25px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #4e6f86;
+}
