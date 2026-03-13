@@ -52,21 +52,21 @@ h1 {
 }
 
 .tagline {
-  margin-top: 8px;
-  font-size: 14px;
+  margin-top: 10px;
+  font-size: 13px;
   color: #5f8fb4;
   text-align: center;
-  letter-spacing: 0.4px;
+  letter-spacing: 1px;
   text-transform: uppercase;
 }
 
 .subtitle {
   text-align: center;
-  margin: 16px auto 28px auto;
+  margin: 14px auto 34px auto;
   color: #56788f;
   font-size: 15px;
   line-height: 1.7;
-  max-width: 470px;
+  max-width: 520px;
 }
 
 .form-group {
@@ -407,6 +407,11 @@ button:hover {
 
 .benefits-card p:last-child {
   margin-bottom: 0;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 28px;
 }
 
 h2 {
