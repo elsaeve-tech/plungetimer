@@ -364,3 +364,27 @@ button:hover {
   color: #5d7f98;
   margin-bottom: 10px;
 }
+.benefits-card {
+  background: linear-gradient(180deg, rgba(245, 251, 255, 0.95), rgba(235, 247, 255, 0.92));
+  border: 1px solid #d6edff;
+  border-radius: 22px;
+  padding: 20px;
+  margin-top: 14px;
+}
+
+.benefits-card h2 {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+  color: #12324a;
+}
+
+.benefits-card p {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #4e6f86;
+}
+
+.benefits-card p:last-child {
+  margin-bottom: 0;
+}
