@@ -628,28 +628,59 @@ a.learn-card:visited p {
   text-decoration: none;
 }
 @media (max-width: 600px) {
-
   body {
-    padding: 16px;
+    padding: 14px;
   }
 
-  .app-card {
-    padding: 18px;
-    border-radius: 20px;
+  .app-shell {
+    width: 100%;
+    max-width: 100%;
   }
 
   .site-nav {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 16px auto;
+    padding: 10px 12px;
     flex-direction: column;
-    gap: 8px;
+    align-items: stretch;
+    gap: 10px;
+    box-sizing: border-box;
+  }
+
+  .nav-logo {
+    text-align: center;
+    font-size: 16px;
   }
 
   .nav-links {
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+
+  .app-card {
+    width: 100%;
+    max-width: 100%;
+    padding: 18px;
+    border-radius: 20px;
+    box-sizing: border-box;
   }
 
   h1 {
     font-size: 36px;
+    line-height: 1.05;
   }
 
+  h2 {
+    font-size: 26px;
+    line-height: 1.1;
+  }
 }
