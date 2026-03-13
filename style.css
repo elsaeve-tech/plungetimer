@@ -579,3 +579,31 @@ h3 {
   font-size: 14px;
   color: #5d7f98;
 }
+
+.learn-section {
+  outline: 4px solid red;
+}
+
+.learn-links {
+  outline: 4px solid blue;
+}
+
+a.learn-card {
+  display: block !important;
+  background: #e8f7ff !important;
+  border: 2px solid #12324a !important;
+  border-radius: 20px !important;
+  padding: 18px !important;
+  text-decoration: none !important;
+  color: #12324a !important;
+}
+
+a.learn-card h3 {
+  margin: 0 0 6px 0 !important;
+  color: #12324a !important;
+}
+
+a.learn-card p {
+  margin: 0 !important;
+  color: #5d7f98 !important;
+}
