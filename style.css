@@ -581,29 +581,47 @@ h3 {
 }
 
 .learn-section {
-  outline: 4px solid red;
+  margin-top: 26px;
 }
 
 .learn-links {
-  outline: 4px solid blue;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-top: 12px;
 }
 
-a.learn-card {
-  display: block !important;
-  background: #e8f7ff !important;
-  border: 2px solid #12324a !important;
-  border-radius: 20px !important;
-  padding: 18px !important;
-  text-decoration: none !important;
-  color: #12324a !important;
+a.learn-card,
+a.learn-card:visited {
+  display: block;
+  text-decoration: none;
+  background: linear-gradient(180deg, #f7fbff, #eef7ff);
+  border: 1px solid #d6edff;
+  border-radius: 20px;
+  padding: 18px;
+  color: #12324a;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
 }
 
-a.learn-card h3 {
-  margin: 0 0 6px 0 !important;
-  color: #12324a !important;
+a.learn-card:hover,
+a.learn-card:focus {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(120, 200, 255, 0.25);
+  background: linear-gradient(180deg, #fafdff, #eef7ff);
+  color: #12324a;
 }
 
-a.learn-card p {
-  margin: 0 !important;
-  color: #5d7f98 !important;
+a.learn-card h3,
+a.learn-card:visited h3 {
+  margin: 0 0 6px 0;
+  color: #12324a;
+  text-decoration: none;
+}
+
+a.learn-card p,
+a.learn-card:visited p {
+  margin: 0;
+  font-size: 14px;
+  color: #5d7f98;
+  text-decoration: none;
 }
