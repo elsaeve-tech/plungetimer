@@ -91,12 +91,13 @@ select {
   font-size: 16px;
   color: #18354a;
   outline: none;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
 }
 
 input:focus,
 select:focus {
   border-color: #8fcfff;
-  box-shadow: 0 0 0 3px rgba(143, 207, 255, 0.22);
+  box-shadow: 0 0 0 3px rgba(143,207,255,0.22);
 }
 
 button {
@@ -154,9 +155,9 @@ button:hover {
 }
 
 .result-time {
-  margin: 0;
-  font-size: 34px;
-  font-weight: bold;
+  margin: 4px 0;
+  font-size: 40px;
+  font-weight: 700;
   color: #0f3048;
 }
 
@@ -235,6 +236,15 @@ button:hover {
   font-size: 18px;
   font-weight: bold;
   color: #244c68;
+}
+
+.calculator-section {
+  background: linear-gradient(180deg,#f7fbff,#eef7ff);
+  border-radius: 26px;
+  padding: 22px;
+  border: 1px solid rgba(173,216,255,0.35);
+  box-shadow: 0 10px 28px rgba(120,200,255,0.18);
+  margin-bottom: 20px;
 }
 
 .share-section {
