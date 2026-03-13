@@ -684,3 +684,13 @@ a.learn-card:visited p {
     line-height: 1.1;
   }
 }
+.page-title {
+  font-size: 44px;
+}
+
+@media (max-width: 600px) {
+  .page-title {
+    font-size: 30px;
+    line-height: 1.1;
+  }
+}
