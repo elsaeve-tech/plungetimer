@@ -497,30 +497,45 @@ h3 {
 .site-nav {
   width: 100%;
   max-width: 720px;
-  margin: 0 auto 20px auto;
+  margin: 0 auto 22px auto;
+  padding: 10px 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  background: rgba(255,255,255,0.55);
+  border: 1px solid rgba(180,220,255,0.4);
+  border-radius: 16px;
+
+  backdrop-filter: blur(8px);
 }
 
 .nav-logo {
   font-family: 'DM Sans', sans-serif;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 16px;
   text-decoration: none;
   color: #12324a;
 }
 
 .nav-links {
   display: flex;
-  gap: 16px;
+  gap: 14px;
 }
 
 .nav-links a {
   text-decoration: none;
-  font-size: 14px;
+  font-size: 13px;
+  padding: 6px 10px;
+  border-radius: 8px;
   color: #5d7f98;
   font-weight: 500;
+  transition: background .15s ease, color .15s ease;
+}
+
+.nav-links a:hover {
+  background: rgba(150,210,255,0.25);
+  color: #12324a;
 }
 
 .nav-links a:hover {
