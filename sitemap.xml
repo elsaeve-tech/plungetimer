@@ -1,9 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://coldplungetime.com/</loc>
-    <lastmod>2026-03-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+
+<url>
+<loc>https://coldplungetime.com/</loc>
+</url>
+
+<url>
+<loc>https://coldplungetime.com/temperature-chart.html</loc>
+</url>
+
+<url>
+<loc>https://coldplungetime.com/how-long-to-cold-plunge.html</loc>
+</url>
+
+<url>
+<loc>https://coldplungetime.com/cold-plunge-temperature-for-women.html</loc>
+</url>
+
+<url>
+<loc>https://coldplungetime.com/cold-plunge-benefits.html</loc>
+</url>
+
+<url>
+<loc>https://coldplungetime.com/best-cold-plunge-temperature.html</loc>
+</url>
+
+<url>
+<loc>https://coldplungetime.com/cold-plunge-before-or-after-workout.html</loc>
+</url>
+
+<url>
+<loc>https://coldplungetime.com/how-often-to-cold-plunge.html</loc>
+</url>
+
 </urlset>
