@@ -303,3 +303,28 @@ function formatTime(seconds) {
 
 loadStreak();
 updateShareCard();
+
+const copyButton = document.getElementById("copyResultButton");
+
+if (copyButton) {
+  copyButton.addEventListener("click", () => {
+    
+    const resultText = document.getElementById("resultBox").innerText;
+
+    const shareText =
+`My cold plunge today:
+${resultText}
+
+Try the calculator:
+https://coldplungetime.com`;
+
+    navigator.clipboard.writeText(shareText);
+
+    copyButton.innerText = "Copied!";
+    
+    setTimeout(() => {
+      copyButton.innerText = "Copy plunge result";
+    }, 2000);
+
+  });
+}
