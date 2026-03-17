@@ -695,3 +695,18 @@ a.learn-card:visited p {
     line-height: 1.1;
   }
 }
+
+.secondary-button {
+  margin-top: 12px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid #cfe6ff;
+  background: #f5fbff;
+  color: #356a94;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.secondary-button:hover {
+  background: #e9f6ff;
+}
