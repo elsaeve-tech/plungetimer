@@ -332,11 +332,21 @@ function formatTime(seconds) {
 loadStreak();
 updateShareCard();
 
-const copyButton = document.getElementById("copyResultButton");
+document.addEventListener("DOMContentLoaded", function () {
+  const copyButton = document.getElementById("copyResultButton");
 
-if (copyButton) {
-  copyButton.addEventListener("click", () => {
+  if (!copyButton) return;
+
+  copyButton.addEventListener("click", async function () {
     const resultText = document.getElementById("result").innerText;
+
+    if (!resultText || resultText === "--:--") {
+      copyButton.innerText = "Calculate first";
+      setTimeout(() => {
+        copyButton.innerText = "Copy plunge result";
+      }, 2000);
+      return;
+    }
 
     const shareText = `My cold plunge today:
 ${resultText}
@@ -344,12 +354,15 @@ ${resultText}
 Try the calculator:
 https://coldplungetime.com`;
 
-    navigator.clipboard.writeText(shareText);
-
-    copyButton.innerText = "Copied!";
+    try {
+      await navigator.clipboard.writeText(shareText);
+      copyButton.innerText = "Copied!";
+    } catch (error) {
+      copyButton.innerText = "Copy failed";
+    }
 
     setTimeout(() => {
       copyButton.innerText = "Copy plunge result";
     }, 2000);
   });
-}
+});
