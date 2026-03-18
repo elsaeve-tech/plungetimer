@@ -75,7 +75,16 @@ Get a suggested plunge duration based on water temperature and experience level,
 <div class="calculator-section">
       <div class="form-group">
         <label for="temp">Water temperature (°F)</label>
-        <input type="number" id="temp" placeholder="Example: 50" />
+        <div class="temp-input-group">
+
+		<input type="number" id="temperature" placeholder="Enter temperature" />
+
+		<select id="tempUnit">
+		  <option value="F">°F</option>
+		  <option value="C">°C</option>
+		</select>
+
+	</div>
       </div>
 
       <div class="form-group">
