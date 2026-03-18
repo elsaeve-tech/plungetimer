@@ -20,7 +20,15 @@ const protocolStages = [
 ];
 
 function calculatePlunge() {
-  const temp = Number(document.getElementById("temp").value);
+  const tempInput = document.getElementById("temperature").value;
+  const unit = document.getElementById("tempUnit").value;
+
+  let tempF = parseFloat(tempInput);
+
+  // Convert Celsius → Fahrenheit
+  if (unit === "C") {
+  tempF = (tempF * 9/5) + 32;
+  }
   const level = document.getElementById("level").value;
   const result = document.getElementById("result");
   const note = document.getElementById("note");
@@ -28,7 +36,7 @@ function calculatePlunge() {
 const warning = document.getElementById("coldWarning");
 warning.textContent = "";
 
-  if (!temp) {
+  if (!tempF) {
     result.textContent = "--:--";
     note.textContent = "Please enter a water temperature.";
     plungeSeconds = 0;
@@ -38,7 +46,7 @@ warning.textContent = "";
     return;
   }
 
-  if (temp < 35 || temp > 65) {
+  if (tempF < 35 || tempF > 65) {
     result.textContent = "--:--";
     note.textContent = "Use a temperature between 35°F and 65°F for this tool.";
     plungeSeconds = 0;
@@ -47,17 +55,17 @@ warning.textContent = "";
     updateShareCard();
     return;
   }
-if (temp <= 38) {
+if (tempF <= 38) {
   warning.textContent =
     "Very cold water. Limit exposure and exit immediately if you feel numb, dizzy, or short of breath.";
 }
 
-  plungeSeconds = getSuggestedSeconds(temp, level);
+  plungeSeconds = getSuggestedSeconds(tempF, level);
   currentSeconds = plungeSeconds;
 
   result.textContent = formatTime(plungeSeconds);
   timerDisplay.textContent = formatTime(currentSeconds);
-  note.textContent = getSupportText(temp, level);
+  note.textContent = getSupportText(tempF, level);
 
   clearInterval(timerInterval);
   timerInterval = null;
@@ -65,31 +73,31 @@ if (temp <= 38) {
   updateShareCard();
 }
 
-function getSuggestedSeconds(temp, level) {
+function getSuggestedSeconds(tempF, level) {
   if (level === "beginner") {
-    if (temp <= 40) return 30;
-    if (temp <= 45) return 45;
-    if (temp <= 50) return 60;
-    if (temp <= 55) return 90;
+    if (tempF <= 40) return 30;
+    if (tempF <= 45) return 45;
+    if (tempF <= 50) return 60;
+    if (tempF <= 55) return 90;
     return 120;
   }
 
   if (level === "intermediate") {
-    if (temp <= 40) return 60;
-    if (temp <= 45) return 90;
-    if (temp <= 50) return 120;
-    if (temp <= 55) return 150;
+    if (tempF <= 40) return 60;
+    if (tempF <= 45) return 90;
+    if (tempF <= 50) return 120;
+    if (tempF <= 55) return 150;
     return 180;
   }
 
-  if (temp <= 40) return 90;
-  if (temp <= 45) return 120;
-  if (temp <= 50) return 180;
-  if (temp <= 55) return 240;
+  if (tempF <= 40) return 90;
+  if (tempF <= 45) return 120;
+  if (tempF <= 50) return 180;
+  if (tempF <= 55) return 240;
   return 300;
 }
 
-function getSupportText(temp, level) {
+function getSupportText(tempF, level) {
   if (level === "beginner") {
     return "Beginner mode keeps the timer short and conservative. Focus on calm breathing and get out if you feel dizzy, numb, or unwell.";
   }
@@ -98,7 +106,7 @@ function getSupportText(temp, level) {
     return "Intermediate mode gives a longer exposure, but colder water still means shorter time. Stay controlled and exit if your body feels stressed.";
   }
 
-  if (temp <= 45) {
+  if (tempF <= 45) {
     return "Advanced mode can tolerate colder water, but this tool still keeps very cold plunges brief.";
   }
 
@@ -260,7 +268,7 @@ function renderProtocol() {
 }
 
 function updateShareCard() {
-  const temp = document.getElementById("temp").value;
+  const tempF = document.getElementById("temp").value;
   const level = document.getElementById("level").value;
   const result = document.getElementById("result").textContent;
 
