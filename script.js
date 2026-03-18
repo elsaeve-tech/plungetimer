@@ -25,18 +25,19 @@ function calculatePlunge() {
 
   let tempF = parseFloat(tempInput);
 
-  // Convert Celsius → Fahrenheit
   if (unit === "C") {
-  tempF = (tempF * 9/5) + 32;
+    tempF = (tempF * 9 / 5) + 32;
   }
+
   const level = document.getElementById("level").value;
   const result = document.getElementById("result");
   const note = document.getElementById("note");
   const timerDisplay = document.getElementById("timerDisplay");
-const warning = document.getElementById("coldWarning");
-warning.textContent = "";
+  const warning = document.getElementById("coldWarning");
 
-  if (!tempF) {
+  warning.textContent = "";
+
+  if (!tempInput || isNaN(tempF)) {
     result.textContent = "--:--";
     note.textContent = "Please enter a water temperature.";
     plungeSeconds = 0;
@@ -55,15 +56,26 @@ warning.textContent = "";
     updateShareCard();
     return;
   }
-if (tempF <= 38) {
-  warning.textContent =
-    "Very cold water. Limit exposure and exit immediately if you feel numb, dizzy, or short of breath.";
-}
+
+  if (tempF <= 38) {
+    warning.textContent =
+      "Very cold water. Limit exposure and exit immediately if you feel numb, dizzy, or short of breath.";
+  }
 
   plungeSeconds = getSuggestedSeconds(tempF, level);
   currentSeconds = plungeSeconds;
 
-  result.textContent = formatTime(plungeSeconds);
+  const tempC = ((tempF - 32) * 5 / 9).toFixed(1);
+
+  let displayTemp;
+
+  if (unit === "C") {
+    displayTemp = `${tempInput}°C (${tempF.toFixed(1)}°F)`;
+  } else {
+    displayTemp = `${tempInput}°F (${tempC}°C)`;
+  }
+
+  result.textContent = `${displayTemp} for ${formatTime(plungeSeconds)}`;
   timerDisplay.textContent = formatTime(currentSeconds);
   note.textContent = getSupportText(tempF, level);
 
@@ -268,12 +280,20 @@ function renderProtocol() {
 }
 
 function updateShareCard() {
-  const tempF = document.getElementById("temp").value;
+  const tempInput = document.getElementById("temperature").value;
+  const unit = document.getElementById("tempUnit").value;
   const level = document.getElementById("level").value;
   const result = document.getElementById("result").textContent;
 
-  document.getElementById("shareTemp").textContent = temp ? `${temp}°F` : "--°F";
-  document.getElementById("shareTime").textContent = result && result !== "--:--" ? result : "--:--";
+  let shareTemp = "--";
+
+  if (tempInput) {
+    shareTemp = `${tempInput}°${unit}`;
+  }
+
+  document.getElementById("shareTemp").textContent = shareTemp;
+  document.getElementById("shareTime").textContent =
+    result && result !== "--:--" ? result : "--:--";
   document.getElementById("shareLevel").textContent =
     level ? capitalize(level) : "--";
 }
@@ -286,7 +306,7 @@ function downloadShareCard() {
   html2canvas(card, {
     backgroundColor: null,
     scale: 2
-  }).then(function(canvas) {
+  }).then(function (canvas) {
     const link = document.createElement("a");
     link.download = "plunge-timer-card.png";
     link.href = canvas.toDataURL("image/png");
@@ -316,11 +336,9 @@ const copyButton = document.getElementById("copyResultButton");
 
 if (copyButton) {
   copyButton.addEventListener("click", () => {
-    
-    const resultText = document.getElementById("resultBox").innerText;
+    const resultText = document.getElementById("result").innerText;
 
-    const shareText =
-`My cold plunge today:
+    const shareText = `My cold plunge today:
 ${resultText}
 
 Try the calculator:
@@ -329,10 +347,9 @@ https://coldplungetime.com`;
     navigator.clipboard.writeText(shareText);
 
     copyButton.innerText = "Copied!";
-    
+
     setTimeout(() => {
       copyButton.innerText = "Copy plunge result";
     }, 2000);
-
   });
 }
