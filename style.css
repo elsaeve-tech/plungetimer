@@ -205,6 +205,12 @@ label {
   color: #244c68;
 }
 
+.updated-date {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  margin-bottom: 1.5rem;
+}
+
 input,
 select {
   width: 100%;
