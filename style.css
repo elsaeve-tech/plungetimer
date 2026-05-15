@@ -821,3 +821,14 @@ td {
   opacity: 0.92;
   font-size: 1.05rem;
 }
+
+  main a,
+main a:visited {
+  color: #6bb6ff !important;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+main a:hover {
+  opacity: 0.82;
+}
