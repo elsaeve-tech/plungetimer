@@ -253,18 +253,15 @@ select:focus {
 
 /* Buttons */
 
-.content-section a {
-  color: #7ec3ff;
+.content-section a,
+.content-section a:visited {
+  color: #6bb6ff !important;
   text-decoration: underline;
   text-underline-offset: 2px;
 }
 
-.content-section a:visited {
-  color: #7ec3ff;
-}
-
 .content-section a:hover {
-  opacity: 0.85;
+  opacity: 0.82;
 }
 
 button,
