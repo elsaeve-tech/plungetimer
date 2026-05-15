@@ -832,3 +832,14 @@ main a:visited {
 main a:hover {
   opacity: 0.82;
 }
+
+.seo-text a,
+.seo-text a:visited {
+  color: #6bb6ff !important;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.seo-text a:hover {
+  opacity: 0.82;
+}
