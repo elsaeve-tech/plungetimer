@@ -253,17 +253,6 @@ select:focus {
 
 /* Buttons */
 
-.content-section a,
-.content-section a:visited {
-  color: #6bb6ff !important;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-
-.content-section a:hover {
-  opacity: 0.82;
-}
-
 button,
 .primary-button,
 .secondary-button {
@@ -822,24 +811,30 @@ td {
   font-size: 1.05rem;
 }
 
-  main a,
-main a:visited {
-  color: #6bb6ff !important;
-  text-decoration: underline;
+/* GLOBAL CONTENT LINKS */
+
+body main a,
+body main a:visited,
+body .seo-text a,
+body .seo-text a:visited {
+  color: #78b7e8 !important;
+  text-decoration: underline !important;
   text-underline-offset: 2px;
 }
 
-main a:hover {
+body main a:hover,
+body .seo-text a:hover {
   opacity: 0.82;
 }
 
-.seo-text a,
-.seo-text a:visited {
-  color: #6bb6ff !important;
-  text-decoration: underline;
-  text-underline-offset: 2px;
+/* NAV LINKS */
+
+body nav a,
+body nav a:visited {
+  color: rgba(255,255,255,0.78) !important;
+  text-decoration: none !important;
 }
 
-.seo-text a:hover {
-  opacity: 0.82;
-}
+body nav a:hover {
+  opacity: 0.65;
+}  
