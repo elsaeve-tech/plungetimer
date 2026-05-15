@@ -228,7 +228,9 @@ main a:visited,
 .seo-text a,
 .seo-text a:visited,
 .article-content a,
-.article-content a:visited {
+.article-content a:visited,
+li a,
+li a:visited {
   color: #2f7fb5;
   text-decoration: underline;
   text-underline-offset: 2px;
@@ -237,7 +239,8 @@ main a:visited,
 
 main a:hover,
 .seo-text a:hover,
-.article-content a:hover {
+.article-content a:hover,
+li a:hover {
   opacity: 0.78;
 }
 
