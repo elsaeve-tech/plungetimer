@@ -838,3 +838,16 @@ body nav a:visited {
 body nav a:hover {
   opacity: 0.65;
 }  
+
+  /* FORCE CONTENT LINK COLORS */
+
+p.seo-text a:link,
+p.seo-text a:visited,
+p.seo-text a:active {
+  color: #78b7e8 !important;
+  text-decoration: underline !important;
+}
+
+p.seo-text a:hover {
+  opacity: 0.82;
+}
