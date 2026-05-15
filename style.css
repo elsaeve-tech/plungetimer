@@ -223,8 +223,8 @@ h3 {
    LINKS
 ----------------------------- */
 
-main a,
-main a:visited,
+.content-section a,
+.content-section a:visited,
 .seo-text a,
 .seo-text a:visited,
 .article-content a,
@@ -237,13 +237,12 @@ li a:visited {
   transition: opacity 0.15s ease;
 }
 
-main a:hover,
+.content-section a:hover,
 .seo-text a:hover,
 .article-content a:hover,
 li a:hover {
   opacity: 0.78;
 }
-
 /* -----------------------------
    HERO
 ----------------------------- */
