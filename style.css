@@ -17,12 +17,12 @@ body {
 
 .app-shell {
   width: 100%;
-  max-width: 720px;
+  max-width: 860px;
 }
 
 .app-card {
   width: 100%;
-  max-width: 720px;
+  max-width: 860px;
   padding: 24px;
   border-radius: 30px;
   background: rgba(255, 255, 255, 0.86);
@@ -257,9 +257,9 @@ li a:hover {
 
 .learn-links {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 14px;
-  margin-top: 12px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 14px;
 }
 
 a.learn-card,
@@ -711,4 +711,7 @@ button:hover,
     grid-template-columns: 1.2fr 1fr 1fr 1fr;
     font-size: 13px;
   }
+  .learn-links {
+  grid-template-columns: 1fr;
+}
 }
