@@ -510,6 +510,32 @@ button:hover,
   text-align: center;
 }
 
+.result-title{
+    margin-bottom:1rem;
+    text-align:center;
+}
+
+.recommendation-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:1rem;
+    margin:1.5rem 0;
+}
+
+.recommendation-item{
+    background:#f5f9fa;
+    border-radius:12px;
+    padding:1rem;
+    text-align:center;
+}
+
+.recommendation-label{
+    display:block;
+    font-size:.85rem;
+    color:#666;
+    margin-bottom:.35rem;
+    font-weight:600;
+}
 .result-label {
   margin: 0 0 8px 0;
   text-transform: uppercase;
