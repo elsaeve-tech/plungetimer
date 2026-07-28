@@ -27,6 +27,12 @@ function calculatePlunge() {
 
   if (unit === "C") {
     tempF = (tempF * 9 / 5) + 32;
+
+  document.getElementById("displayTemp").textContent =
+    temperature + "°" + tempUnit;
+
+document.getElementById("displayLevel").textContent =
+    level.charAt(0).toUpperCase() + level.slice(1);
   }
 
   const level = document.getElementById("level").value;
