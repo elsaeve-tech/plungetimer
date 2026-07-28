@@ -154,13 +154,32 @@
         </button>
 
         <div class="result-card">
-          <p class="result-label">Suggested plunge time</p>
-          <p id="result" class="result-time">--:--</p>
-          <p id="note" class="result-note">
-            Start conservatively and exit if you feel unwell.
-          </p>
-          <p id="coldWarning" class="warning"></p>
-        </div>
+
+  <h2 class="result-title">Your Recommended Cold Plunge Time</h2>
+
+  <p id="result" class="result-time">--:--</p>
+
+  <div class="recommendation-grid">
+
+    <div class="recommendation-item">
+      <span class="recommendation-label">Water Temperature</span>
+      <span id="displayTemp">--</span>
+    </div>
+
+    <div class="recommendation-item">
+      <span class="recommendation-label">Experience</span>
+      <span id="displayLevel">--</span>
+    </div>
+
+  </div>
+
+  <p id="note" class="result-note">
+    Enter your temperature above to receive a personalized recommendation.
+  </p>
+
+  <p id="coldWarning" class="warning"></p>
+
+</div>
 
         <button id="copyResultButton" class="secondary-button">
           Copy plunge result
