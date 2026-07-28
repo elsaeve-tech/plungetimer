@@ -239,6 +239,31 @@ h3 {
   padding: 0 1rem;
 }
 
+.methodology-section{
+    margin:4rem 0;
+}
+
+.method-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:1.5rem;
+    margin-top:2rem;
+}
+
+.method-card{
+    background:#f7fbfc;
+    border-radius:14px;
+    padding:1.4rem;
+}
+
+.method-card h3{
+    margin-bottom:.75rem;
+}
+
+.method-card p{
+    margin:0;
+}
+
 /* -----------------------------
    LINKS
 ----------------------------- */
