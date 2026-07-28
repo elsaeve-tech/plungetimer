@@ -92,6 +92,19 @@ nav a:hover {
    TYPOGRAPHY
 ----------------------------- */
 
+.intro-answer{
+    margin:2rem 0;
+    text-align:left;
+}
+
+.intro-answer h2{
+    margin-bottom:1rem;
+}
+
+.intro-answer p{
+    margin-bottom:1rem;
+}
+
 .eyebrow {
   margin: 0 0 8px 0;
   text-transform: uppercase;
