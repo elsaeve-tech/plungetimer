@@ -264,6 +264,16 @@ h3 {
     margin:0;
 }
 
+.chart-tips{
+    margin-top:1.5rem;
+    padding-left:1.2rem;
+}
+
+.chart-tips li{
+    margin-bottom:.75rem;
+    line-height:1.6;
+}
+
 /* -----------------------------
    LINKS
 ----------------------------- */
