@@ -624,6 +624,26 @@ button:hover,
 /* -----------------------------
    CHART
 ----------------------------- */
+.trust-section{
+    margin:4rem 0;
+}
+
+.trust-box{
+    margin-top:2rem;
+    padding:1.5rem;
+    background:#f7fbfc;
+    border-left:5px solid #5aa9d6;
+    border-radius:12px;
+}
+
+.trust-box ul{
+    margin-top:1rem;
+    padding-left:1.25rem;
+}
+
+.trust-box li{
+    margin-bottom:.75rem;
+}
 
 .chart-intro {
   font-size: 14px;
