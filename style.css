@@ -359,6 +359,34 @@ a.learn-card:visited p {
   text-decoration: none;
 }
 
+/* MISTAKES SECTION------*/
+
+.mistakes-section{
+    margin:4rem 0;
+}
+
+.mistakes-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:1.5rem;
+    margin-top:2rem;
+}
+
+.mistake-card{
+    background:#f7fbfc;
+    padding:1.5rem;
+    border-radius:14px;
+    transition:.2s ease;
+}
+
+.mistake-card:hover{
+    transform:translateY(-3px);
+}
+
+.mistake-card h3{
+    margin-bottom:.75rem;
+}
+
 /* -----------------------------
    HERO
 ----------------------------- */
